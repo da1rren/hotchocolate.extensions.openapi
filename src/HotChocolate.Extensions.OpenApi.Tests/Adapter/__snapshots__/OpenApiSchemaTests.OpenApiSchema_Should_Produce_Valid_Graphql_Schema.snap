@@ -1,0 +1,8 @@
+﻿
+type bar { 
+    foo: Int
+}
+
+type foobar { 
+    foo: Int
+}

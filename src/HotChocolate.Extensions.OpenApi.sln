@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.Extensions.Ope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.Extensions.OpenApi.Tests", "HotChocolate.Extensions.OpenApi.Tests\HotChocolate.Extensions.OpenApi.Tests.csproj", "{8E771272-C679-4CD1-854E-B18B8616A2A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.OpenApi", "Sample.OpenApi\Sample.OpenApi.csproj", "{9EDDB717-5847-45C8-B0A3-658867052814}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.HotChocolate", "Sample.HotChocolate\Sample.HotChocolate.csproj", "{D679B7ED-5D7A-4D5D-9E42-6C08FBD3AD8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{8E771272-C679-4CD1-854E-B18B8616A2A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E771272-C679-4CD1-854E-B18B8616A2A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E771272-C679-4CD1-854E-B18B8616A2A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EDDB717-5847-45C8-B0A3-658867052814}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EDDB717-5847-45C8-B0A3-658867052814}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EDDB717-5847-45C8-B0A3-658867052814}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EDDB717-5847-45C8-B0A3-658867052814}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D679B7ED-5D7A-4D5D-9E42-6C08FBD3AD8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D679B7ED-5D7A-4D5D-9E42-6C08FBD3AD8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D679B7ED-5D7A-4D5D-9E42-6C08FBD3AD8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D679B7ED-5D7A-4D5D-9E42-6C08FBD3AD8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d53ad64c-e835-43dc-9f4a-e5299fa08ab7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.Tests/Adapter/OpenApiAdapterTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.Tests/Adapter/OpenApiSchemaTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.Tests/Fixtures/DiFixture.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi/Adapter/OpenApiAdapter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi/Adapter/OpenApiOperations.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi/Adapter/OpenApiSchema.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi/DependencyInjection/HotChocolateStitchingRequestExecutorExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi/Usings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sample.HotChocolate/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sample.HotChocolate/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sample.OpenApi/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sample.OpenApi/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.Tests/HotChocolate.Extensions.OpenApi.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.Tests/HotChocolate.Extensions.OpenApi.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.Tests/UnitTest1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.sln" beforeDir="false" afterPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi/HotChocolate.Extensions.OpenApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi/HotChocolate.Extensions.OpenApi.csproj" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/86e224abc17c258bcdd93d01ffb2a6ed698429fe5ca6ce57cc6b324fe62af74/TypeBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e6935cea963ee2227a6f727e80ce91569c85c8ba5aedc4ca0f186e8837c82/ISchemaBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f6b5ddf4d4e327fd466e2d63f16291fc531db29586d766d352a6f557cb457d/SchemaBuilderExtensions.Types.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AbknOJ8mL7Qx2Bnh4JW2W6hXyx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d53ad64c-e835-43dc-9f4a-e5299fa08ab7" name="Changes" comment="" />
+      <created>1655285843217</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655285843217</updated>
+      <workItem from="1655285849659" duration="8682000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HotChocolate.Extensions.OpenApi/Adapter/OpenApiAdapter.cs</url>
+          <line>84</line>
+          <properties documentPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi/Adapter/SwaggerAdapter.cs" initialLine="74" containingFunctionPresentation="method 'ProcessPath'">
+            <startOffsets>
+              <option value="2873" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2879" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HotChocolate.Extensions.OpenApi/Adapter/OpenApiAdapter.cs</url>
+          <line>66</line>
+          <properties documentPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi/Adapter/OpenApiAdapter.cs" initialLine="66" containingFunctionPresentation="method 'ProcessPath'">
+            <startOffsets>
+              <option value="2175" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2197" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.Tests/Adapter/OpenApiSchemaTests.cs</url>
+          <line>20</line>
+          <properties documentPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.Tests/Adapter/OpenApiSchemaTests.cs" initialLine="20" containingFunctionPresentation="method 'OpenApiType_Should_Produce_Valid_Graphql_Type'">
+            <startOffsets>
+              <option value="561" />
+            </startOffsets>
+            <endOffsets>
+              <option value="562" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.Tests/Adapter/OpenApiSchemaTests.cs</url>
+          <line>32</line>
+          <properties documentPath="$PROJECT_DIR$/HotChocolate.Extensions.OpenApi.Tests/Adapter/OpenApiSchemaTests.cs" initialLine="33" containingFunctionPresentation="method 'OpenApiSchema_Should_Produce_Valid_Graphql_Schema'">
+            <startOffsets>
+              <option value="975" />
+            </startOffsets>
+            <endOffsets>
+              <option value="976" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Type#Microsoft.OpenApi.Models.OpenApiDocument" memberName="Components" />
+        <PinnedItemInfo parentTag="Type#Microsoft.OpenApi.Readers.ReadResult" memberName="OpenApiDocument" />
+        <PinnedItemInfo parentTag="Type#Microsoft.OpenApi.Models.OpenApiComponents" memberName="Schemas" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
