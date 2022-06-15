@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.Extensions.OpenApi", "HotChocolate.Extensions.OpenApi\HotChocolate.Extensions.OpenApi.csproj", "{DDA24BB1-EB96-4BA4-AB2B-BAA166299829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotChocolate.Extensions.OpenApi.Tests", "HotChocolate.Extensions.OpenApi.Tests\HotChocolate.Extensions.OpenApi.Tests.csproj", "{8E771272-C679-4CD1-854E-B18B8616A2A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDA24BB1-EB96-4BA4-AB2B-BAA166299829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA24BB1-EB96-4BA4-AB2B-BAA166299829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA24BB1-EB96-4BA4-AB2B-BAA166299829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA24BB1-EB96-4BA4-AB2B-BAA166299829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E771272-C679-4CD1-854E-B18B8616A2A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E771272-C679-4CD1-854E-B18B8616A2A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E771272-C679-4CD1-854E-B18B8616A2A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E771272-C679-4CD1-854E-B18B8616A2A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
