@@ -18,8 +18,9 @@ public class OpenApiAdapterTests : IClassFixture<DiFixture>
     public async Task Should_Be_Able_To_Covert_PetStore_V2_Yaml_To_Sdl()
     {
         var factory = _fixture.ServiceProvider.GetService<IHttpClientFactory>();
+        var client = factory.CreateClient();
         var uri = new Uri("https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v2.0/yaml/petstore.yaml");
-        var adapter = new SwaggerAdapter(factory);
+        var adapter = new SwaggerAdapter(client);
         var adaptedSchema = await adapter.ToSchemaSdl(uri);
         adaptedSchema.Types.ShouldNotBeEmpty();
         adaptedSchema.Operations.ShouldNotBeEmpty();

@@ -6,7 +6,21 @@ public record ParsedOpenApiSchema(ParsedOpenApiType[] Types, IOpenApiOperation[]
 {
     public override string ToString()
     {
-        return string.Join(Environment.NewLine, Types.Select(x => x.ToString()));
+        var sdl = Types.Select(x => x.ToString())
+            .Append(GenerateQueryRoot());
+        
+        return string.Join(Environment.NewLine, sdl);
+    }
+
+    private string GenerateQueryRoot()
+    {
+        var queryOperations = Operations.OfType<QueryOperation>()
+            .Select(x => x.ToString());
+
+        return 
+$@"type Query {{
+    {string.Join(Environment.NewLine, queryOperations)}
+}}";
     }
 }
 

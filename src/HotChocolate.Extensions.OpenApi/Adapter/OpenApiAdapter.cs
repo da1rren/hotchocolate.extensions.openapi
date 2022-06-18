@@ -74,21 +74,18 @@ public class SwaggerAdapter
                 .SelectMany(x => x.Content.Values)
                 .Select(x => x.Schema);
 
-            var r = responseTypes.First();
-            var rr = _openApiDocument.ResolveReference(r.Reference);
-            var rrr = r.Items.Reference;
-            var rrrr = _openApiDocument.ResolveReference(rrr);
-            
+            var queryTypes = ParseResponseTypes(responseTypes);
+            var operationName = name.Trim('/').Replace('/', '_');
             switch (operation.Key)
             {
                 case OperationType.Get:
-                    operations.Add(new QueryOperation(name, operation.Key));
+                    operations.Add(new QueryOperation(operationName, operation.Key, queryTypes.Single()));
                     break;
                 
                 case OperationType.Delete:
                 case OperationType.Put:
                 case OperationType.Post:
-                    operations.Add(new MutationOperation(name, operation.Key));
+                    operations.Add(new MutationOperation(operationName, operation.Key));
                     break;
                 
                 case OperationType.Options:
@@ -104,21 +101,14 @@ public class SwaggerAdapter
         return operations;
     }
 
-    private IEnumerable<OpenApiResponse> ParseResponseTypes(IEnumerable<OpenApiSchema> schemas)
+    private IEnumerable<string> ParseResponseTypes(IEnumerable<OpenApiSchema> schemas)
     {
-        return Enumerable.Empty<OpenApiResponse>();
+        return schemas.Select(ResolveFullType)
+            .ToHashSet(StringComparer.OrdinalIgnoreCase);
     }
 
-    // private string ParseOpenApiSchemaType(OpenApiSchema rootSchema)
-    // {
-    //     var types = new List<string>();
-    //     var stack = new Stack<OpenApiSchema>();
-    //     stack.Push(rootSchema);
-    //
-    //     while (stack.TryPop(out var schema))
-    //     {
-    //          types.Add(schema.Type);
-    //          stack.Push(schema.GetEffective());
-    //     }
-    // }
+    private string ResolveFullType(OpenApiSchema schema)
+    {
+        return schema?.Type == "array" ? $"[{schema.Items.Reference.Id}]" : schema.Reference.Id;
+    }
 }
