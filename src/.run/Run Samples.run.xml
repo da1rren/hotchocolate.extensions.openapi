@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Samples" type="CompoundRunConfigurationType">
+    <toRun name="Sample.HotChocolate" type="LaunchSettings" />
+    <toRun name="Sample.OpenApi" type="LaunchSettings" />
+    <method v="2" />
+  </configuration>
+</component>

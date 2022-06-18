@@ -5,26 +5,29 @@ using Microsoft.OpenApi.Readers;
 
 public class SwaggerAdapter
 {
-    private readonly IHttpClientFactory _clientFactory;
+    private readonly HttpClient _httpClient;
 
-    public SwaggerAdapter(IHttpClientFactory clientFactory)
+    private OpenApiDocument _openApiDocument;
+
+    public SwaggerAdapter(HttpClient httpClient)
     {
-        _clientFactory = clientFactory;
+        _httpClient = httpClient;
     }
     
-    public async Task<OpenApiSchema> ToSchemaSdl(Uri swaggerDocumentUri)
+    public async Task<ParsedOpenApiSchema> ToSchemaSdl(Uri swaggerDocumentUri)
     {
-        var client = _clientFactory.CreateClient();
-        var response = await client.GetStreamAsync(swaggerDocumentUri);
+        var response = await _httpClient.GetStreamAsync(swaggerDocumentUri);
         
         //todo error handling
         var openApiDocumentResult = await new OpenApiStreamReader()
             .ReadAsync(response);
 
-        return ProcessSwaggerDocument(openApiDocumentResult.OpenApiDocument);
+        _openApiDocument = openApiDocumentResult.OpenApiDocument;
+        
+        return ProcessSwaggerDocument(_openApiDocument);
     }
 
-    private OpenApiSchema ProcessSwaggerDocument(OpenApiDocument openApiDocument)
+    private ParsedOpenApiSchema ProcessSwaggerDocument(OpenApiDocument openApiDocument)
     {
         var types = ProcessSchemas(openApiDocument.Components.Schemas)
             //todo remove after making recursive
@@ -34,22 +37,22 @@ public class SwaggerAdapter
         var operations = ProcessPaths(openApiDocument.Paths)
             .ToArray();
 
-        return new OpenApiSchema(types, operations);
+        return new ParsedOpenApiSchema(types, operations);
     }
 
-    private IEnumerable<OpenApiType> ProcessSchemas(IDictionary<string, Microsoft.OpenApi.Models.OpenApiSchema> schemas)
+    private IEnumerable<ParsedOpenApiType> ProcessSchemas(IDictionary<string, OpenApiSchema> schemas)
     {
         return schemas.Select(schema => 
             ProcessSchema(schema.Key, schema.Value));
     }
 
-    private OpenApiType ProcessSchema(string name, Microsoft.OpenApi.Models.OpenApiSchema schema)
+    private ParsedOpenApiType ProcessSchema(string name, OpenApiSchema schema)
     {
         //todo make recursive  
         var schemaProperties = schema.Properties.Select(properties =>
-            new OpenApiTypeField(properties.Key, properties.Value.Type));
+            new ParsedOpenApiTypeField(properties.Key, properties.Value.Type));
 
-        return new OpenApiType(name, schemaProperties.ToArray());
+        return new ParsedOpenApiType(name, schemaProperties.ToArray());
     }
     
     private IEnumerable<IOpenApiOperation> ProcessPaths(OpenApiPaths paths)
@@ -64,6 +67,18 @@ public class SwaggerAdapter
         
         foreach (var operation in item.Operations)
         {
+            var responses = operation.Value.Responses
+                .Select(x => x.Value);
+
+            var responseTypes = responses
+                .SelectMany(x => x.Content.Values)
+                .Select(x => x.Schema);
+
+            var r = responseTypes.First();
+            var rr = _openApiDocument.ResolveReference(r.Reference);
+            var rrr = r.Items.Reference;
+            var rrrr = _openApiDocument.ResolveReference(rrr);
+            
             switch (operation.Key)
             {
                 case OperationType.Get:
@@ -88,4 +103,22 @@ public class SwaggerAdapter
 
         return operations;
     }
+
+    private IEnumerable<OpenApiResponse> ParseResponseTypes(IEnumerable<OpenApiSchema> schemas)
+    {
+        return Enumerable.Empty<OpenApiResponse>();
+    }
+
+    // private string ParseOpenApiSchemaType(OpenApiSchema rootSchema)
+    // {
+    //     var types = new List<string>();
+    //     var stack = new Stack<OpenApiSchema>();
+    //     stack.Push(rootSchema);
+    //
+    //     while (stack.TryPop(out var schema))
+    //     {
+    //          types.Add(schema.Type);
+    //          stack.Push(schema.GetEffective());
+    //     }
+    // }
 }
